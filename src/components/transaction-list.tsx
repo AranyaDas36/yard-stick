@@ -21,7 +21,7 @@ export function TransactionList({ transactions }: { transactions: Transaction[] 
             <TableRow key={transaction._id}>
               <TableCell>{format(new Date(transaction.date), "PP")}</TableCell>
               <TableCell>{transaction.description}</TableCell>
-              <TableCell className="text-right">${transaction.amount.toFixed(2)}</TableCell>
+              <TableCell className="text-right">Rs {transaction.amount.toFixed(2)}</TableCell>
               <TableCell className="text-right">
                 <Button
                   variant="destructive"

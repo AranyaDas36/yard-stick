@@ -26,7 +26,7 @@ export function MonthlyChart({ data }: { data: ChartData[] }) {
               fontSize={12}
               tickLine={false}
               axisLine={false}
-              tickFormatter={(value) => `$${value}`}
+              tickFormatter={(value) => `Rs ${value}`}
             />
             <Bar dataKey="amount" fill="currentColor" radius={[4, 4, 0, 0]} className="fill-primary" />
             <Tooltip
@@ -41,7 +41,7 @@ export function MonthlyChart({ data }: { data: ChartData[] }) {
                         </div>
                         <div className="flex flex-col">
                           <span className="text-[0.70rem] uppercase text-muted-foreground">Amount</span>
-                          <span className="font-bold">${payload[0].value}</span>
+                          <span className="font-bold">Rs {payload[0].value}</span>
                         </div>
                       </div>
                     </div>
